@@ -1,0 +1,15 @@
+.navbar {
+    height: 100px;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 40px auto; /* Changed margin to 40px auto */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white; /* Changed background color to white */
+        border: 1px solid black; /* Added border with black color */
+        border-radius: 20px; /* Added border-radius */
+        height: 80%;
+    }
+}
