@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^10.16.4",
+    "@emailjs/browser": "^3.12.1",
+    "framer-motion": "^10.18.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.68.0"
@@ -23,6 +24,6 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.3",
-    "vite": "^4.5.3"
+    "vite": "4.4.5"
   }
 }

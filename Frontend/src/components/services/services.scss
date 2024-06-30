@@ -1,0 +1,162 @@
+@import "../../app.scss"; // Import global styles if needed
+
+.services {
+  margin: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: white;
+
+  @include mobile {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .title-row {
+    text-align: center;
+    margin-top: 60px;
+
+    h2 {
+      font-size: 30px;
+      color: #6a0dad;
+      margin-bottom: 15px;
+
+      @include mobile {
+        margin-top: 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+    }
+
+    h1 {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: black;
+
+      .highlight {
+        color: #a07d15;
+      }
+
+      @include mobile {
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .card-row {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    gap: 15px;
+
+    @include mobile {
+      margin: 70px;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .card {
+      width: calc(33.33% - 20px);
+      max-width: 500px;
+      background-color: black;
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, height 0.3s;
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+      margin: 20px;
+
+      @include mobile {
+        width: 80%;
+        margin: 10px;}
+
+      &:hover {
+        background-color: #000000;
+      }
+
+      img {
+        width: 400px;
+        height: 300px;
+        margin-bottom: 20px;
+
+        @include mobile {
+          width: 150px;
+          height: 150px;
+          margin: 30px;
+        }
+      }
+
+      .card-text {
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        p {
+          text-align: center;
+          font-size: 25px;
+          color: white;
+          margin: 10px;
+
+          @include mobile {
+            font-size: 15px;
+            text-align: center;
+          }
+        }
+
+        .full-text {
+          font-size: 10px;
+          margin: 10px;
+          text-align: center;
+
+          @include mobile {
+            font-size: 10px;
+            text-align: center;
+          }
+        }
+
+        .card-button {
+          align-items: center;
+          background: white;
+          color: black;
+          border: none;
+          padding: 10px 20px;
+          margin-top: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          transform: translateY(10px);
+          transition: opacity 0.1s, transform 0.1s;
+
+          &:hover {
+            background: #6a0dad;
+            color: white;
+          }
+        }
+      }
+
+
+      &:hover .card-text {
+        opacity: 1;
+      }
+
+      &:hover .card-button {
+        opacity: 1;
+        transform: translateY(1);
+      }
+
+      &:hover .full-text {
+        display: block;
+      }
+    }
+  }
+}

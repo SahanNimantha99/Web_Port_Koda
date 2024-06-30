@@ -1,15 +1,45 @@
-.navbar {
-    height: 100px;
+@import "../../app.scss";
 
-    .wrapper {
-        max-width: 1200px;
-        margin: 40px auto; /* Changed margin to 40px auto */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: white; /* Changed background color to white */
-        border: 1px solid black; /* Added border with black color */
-        border-radius: 20px; /* Added border-radius */
-        height: 80%;
+.navbar {
+  height: 100px;
+  background-color: black;
+  color: white;
+
+  .wrapper {
+    background-color: white;
+    max-width: 1366px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+
+    @include mobile {
+      margin: 50px;
+      justify-content: flex-end;
     }
+
+    span {
+      color: #441690;
+      margin-left: 20px;
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      margin-right: 20px;
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
 }
